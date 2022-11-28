@@ -1,7 +1,7 @@
 <idea-plugin url="https://plugins.jetbrains.com" require-restart="true">
     <id>org.wen.github.SpecialCopyPlugin</id>
     <name>SpecialCopy</name>
-    <vendor email="cwlhust2009@163.com" url="https://github.com">xiao wen</vendor>
+    <vendor email="cwlhust2009@163.com" url="https://github.com/Goodvincent/SpecialCopyPlugin/pulls">xiao wen</vendor>
 
     <description><![CDATA[
     Like PLSQL Special Copy.You can define different template files to copy text<br>
