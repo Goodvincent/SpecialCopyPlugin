@@ -1,0 +1,37 @@
+plugins {
+    id 'org.jetbrains.intellij' version '1.9.0'
+    id 'java'
+}
+
+group 'org.wen.github'
+version '0.0.8'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/com.google.guava/guava
+    implementation group: 'com.google.guava', name: 'guava', version: '31.1-jre'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+// See https://github.com/JetBrains/gradle-intellij-plugin/
+intellij {
+    version = '2021.2.2'
+}
+
+patchPluginXml {
+    changeNotes = """
+      Fix bugs.<br>
+      <em></em>"""
+}
+
+publishPlugin {
+    channels = ["Stable"]
+    token = "perm:R29vZHZpbmNlbnQ=.OTItNzAzNg==.4yVNWz8emvgS3s7aycFCZUrlGEG2xK"
+}
+test {
+    useJUnitPlatform()
+}

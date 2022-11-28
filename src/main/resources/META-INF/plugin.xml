@@ -1,0 +1,56 @@
+<idea-plugin url="https://plugins.jetbrains.com" require-restart="true">
+    <id>org.wen.github.SpecialCopyPlugin</id>
+    <name>SpecialCopy</name>
+    <vendor email="cwlhust2009@163.com" url="https://github.com">xiao wen</vendor>
+
+    <description><![CDATA[
+    Like PLSQL Special Copy.You can define different template files to copy text<br>
+    The template file type must be "*.copy"<br>
+    eg:<br>
+    <em>
+        ;SpecialCopy definition<br>
+        ;&lt;LINE_1&gt; for first line<br>
+        ;&lt;LINE_*&gt; for all other lines<br>
+        ;&lt;LINE_N&gt; for last line<br>
+        StringBuffer sql = new StringBuffer();<br>
+        sql.append("&lt;line_1&gt;");<br>
+        sql.append("&lt;line_*&gt;");<br>
+        sql.append("&lt;line_n&gt;");<br>
+    </em>
+    ]]></description>
+
+    <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+    <version>0.0.1</version>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <applicationService
+                serviceImplementation="com.wen.github.settings.AppSettingsState"/>
+        <applicationConfigurable
+                parentId="tools"
+                instance="com.wen.github.config.AppSettingsConfigurable"
+                id="com.wen.github.config.AppSettingsConfigurable"
+                displayName="Special Copy"/>
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+<!--        <action id="SpecialCopyAction" class="com.wen.github.action.SpecialCopyAction" text="SpecialCopy"-->
+<!--                description="SpecialCopy">-->
+<!--            <add-to-group group-id="ToolsMenu" anchor="first"/>-->
+<!--        </action>-->
+
+        <group id="com.wen.github.action.SpecialCopyActionGroup"
+                class="com.wen.github.action.SpecialCopyActionGroup"
+                popup="true"
+                text="Special Copy"
+                description="Special Copy Actions"
+                >
+            <add-to-group
+                    group-id="ToolsMenu"
+                    anchor="last"
+            />
+        </group>
+    </actions>
+</idea-plugin>
