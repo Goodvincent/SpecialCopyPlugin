@@ -18,11 +18,23 @@
         sql.append("&lt;line_n&gt;");<br>
     </em>
     ]]></description>
+    
+    <product-descriptor code="***"
+                        release-date="20221128"
+                        release-version="20221"
+                        optional="true"/>
 
     <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
          on how to target different products -->
     <depends>com.intellij.modules.platform</depends>
-    <version>0.0.1</version>
+    <depends>com.intellij.modules.lang</depends>
+    <version>2022.1.0</version>
+
+    <idea-version since-build="212"/>
+
+    <incompatible-with>
+        com.intellij.database
+    </incompatible-with>
 
     <extensions defaultExtensionNs="com.intellij">
         <applicationService

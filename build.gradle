@@ -4,10 +4,19 @@ plugins {
 }
 
 group 'org.wen.github'
-version '0.0.9'
+version '2022.1.1'
 
 repositories {
     mavenCentral()
+}
+
+tasks {
+    buildSearchableOptions {
+        enabled = false
+    }
+    runIde {
+        jvmArgs("-Djava.awt.headless=false")
+    }
 }
 
 dependencies {
@@ -30,7 +39,7 @@ patchPluginXml {
 
 publishPlugin {
     channels = ["Stable"]
-    token = "perm:R29vZHZpbmNlbnQ=.OTItNzAzNg==.4yVNWz8emvgS3s7aycFCZUrlGEG2xK"
+    token = "***"
 }
 test {
     useJUnitPlatform()
