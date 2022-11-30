@@ -5,12 +5,12 @@ Download and install the plugin manually from the IntelliJ Plugin Website or use
 After install the plugin you can touch a *.copy file template in any folder.  
 The copy file like this :
 ~~~
-;SpecialCopy definition<br>
-;<LINE_1> for first line<br>
-;<LINE_*> for all other lines<br>
-;<LINE_N> for last line<br>
+;SpecialCopy definition
+;<LINE_1> for first line
+;<LINE_*> for all other lines
+;<LINE_N> for last line
 
-StringBuffer sql = new StringBuffer();<br>
+StringBuffer sql = new StringBuffer();
 sql.append("<line_1>");
 sql.append("<line_*>");
 sql.append("<line_n>");
