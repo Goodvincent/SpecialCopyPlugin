@@ -6,14 +6,14 @@ After install the plugin you can touch a *.copy file template in any folder.
 The copy file like this :
 ~~~
 ;SpecialCopy definition<br>
-;&lt;LINE_1&gt; for first line<br>
-;&lt;LINE_*&gt; for all other lines<br>
-;&lt;LINE_N&gt; for last line<br>
+;<LINE_1> for first line<br>
+;<LINE_*> for all other lines<br>
+;<LINE_N> for last line<br>
 
 StringBuffer sql = new StringBuffer();<br>
-sql.append("&lt;line_1&gt;");<br>
-sql.append("&lt;line_*&gt;");<br>
-sql.append("&lt;line_n&gt;");<br>
+sql.append("<line_1>");
+sql.append("<line_*>");
+sql.append("<line_n>");
 ~~~
 Then you can open the idea settings to set the template file location.  
 ![img.png](img.png)
